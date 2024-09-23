@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crop Recommendation App</title>
+</head>
+<body>
+    <h1>Enter Field Data</h1>
+    <form method="POST">
+        <label for="N">Nitrogen (N):</label>
+        <input type="text" id="N" name="N" required><br><br>
+
+        <label for="P">Phosphorous (P):</label>
+        <input type="text" id="P" name="P" required><br><br>
+
+        <label for="K">Potassium (K):</label>
+        <input type="text" id="K" name="K" required><br><br>
+
+        <label for="temperature">Temperature (°C):</label>
+        <input type="text" id="temperature" name="temperature" required><br><br>
+
+        <label for="humidity">Humidity (%):</label>
+        <input type="text" id="humidity" name="humidity" required><br><br>
+
+        <label for="ph">pH:</label>
+        <input type="text" id="ph" name="ph" required><br><br>
+
+        <label for="rainfall">Rainfall (mm):</label>
+        <input type="text" id="rainfall" name="rainfall" required><br><br>
+
+        <label for="plant_type">Plant Type:</label>
+        <select id="plant_type" name="plant_type" required>
+            <option value="rice">Rice</option>
+            <option value="maize">Maize</option>
+            <option value="chickpea">Chickpea</option>
+            <option value="kidneybeans">Kidney Beans</option>
+            <option value="pigeonpeas">Pigeon Peas</option>
+            <option value="mothbeans">Moth Beans</option>
+            <option value="mungbean">Mung Bean</option>
+            <option value="blackgram">Black Gram</option>
+            <option value="lentil">Lentil</option>
+            <option value="pomegranate">Pomegranate</option>
+            <option value="banana">Banana</option>
+            <option value="mango">Mango</option>
+            <option value="grapes">Grapes</option>
+            <option value="watermelon">Watermelon</option>
+            <option value="muskmelon">Muskmelon</option>
+            <option value="apple">Apple</option>
+            <option value="orange">Orange</option>
+            <option value="papaya">Papaya</option>
+            <option value="coconut">Coconut</option>
+            <option value="cotton">Cotton</option>
+            <option value="jute">Jute</option>
+            <option value="coffee">Coffee</option>
+        </select><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    {% if probs is not none %}
+        <h2>Predicted score for the item is</h2>
+        <h2>{{ probs }}</h2>
+    {% endif %}
+</body>
+</html>
+
+
+
+
+
+
+
